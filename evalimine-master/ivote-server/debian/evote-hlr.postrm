@@ -1,0 +1,13 @@
+#!/bin/sh
+
+set -e
+
+NAME=evote-hlr
+USER=hlr
+
+if [ "$1" = purge ] ; then
+	deluser --quiet $USER > /dev/null || true
+fi
+
+#DEBHELPER#
+
